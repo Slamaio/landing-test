@@ -1,0 +1,30 @@
+@import './base.css';
+
+#app {
+  font-weight: normal;
+}
+
+body {
+  display: flex;
+}
+
+/* a {
+  text-decoration: none;
+} */
+
+@media (min-width: 64rem) {
+  #app {
+    display: grid;
+    grid-template-columns: 7.5rem 1fr 7.5rem;
+    grid-template-rows: 1fr 7.5rem;
+
+    flex-grow: 1;
+  }
+}
+
+@media (max-width: 64rem) {
+  #app {
+    padding: 2rem;
+    display: flex;
+  }
+}

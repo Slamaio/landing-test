@@ -1,0 +1,37 @@
+<template>
+  <main>
+    <RecommendationsComponent />
+    <ReadyToSellComponent />
+    <ReviewsComponent />
+    <TipsAndTricksComponent />
+    <SubscribeComponent />
+  </main>
+</template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-facing-decorator'
+
+import RecommendationsComponent from '@/components/RecommendationsComponent.vue'
+import ReadyToSellComponent from '@/components/ReadyToSellComponent.vue'
+import ReviewsComponent from '@/components/ReviewsComponent.vue'
+import TipsAndTricksComponent from '@/components/TipsAndTricksComponent.vue'
+import SubscribeComponent from '@/components/SubscribeComponent.vue'
+
+@Component({
+  components: {
+    RecommendationsComponent,
+    ReadyToSellComponent,
+    ReviewsComponent,
+    TipsAndTricksComponent,
+    SubscribeComponent,
+  },
+})
+export default class HomeView extends Vue {}
+</script>
+
+<style scoped>
+main {
+  display: flex;
+  flex-direction: column;
+}
+</style>
