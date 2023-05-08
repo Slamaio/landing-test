@@ -4,14 +4,12 @@
       <img alt="Hounter logo" src="@/assets/logo.svg" width="36" height="36" />
       <h1>Hounter</h1>
     </div>
-    <ul>
-      <div class="container--flex nav-buttons">
-        <li><button class="nav__button">About Us</button></li>
-        <li><button class="nav__button">Article</button></li>
-        <li><button class="nav__button">Property</button></li>
-      </div>
-      <li><button class="nav__button nav__button--sign-up">Sign Up!</button></li>
-    </ul>
+    <div class="nav__buttons">
+      <button class="nav__button">About Us</button>
+      <button class="nav__button">Article</button>
+      <button class="nav__button">Property</button>
+      <button class="nav__button nav__button--sign-up">Sign Up!</button>
+    </div>
   </nav>
 </template>
 
@@ -24,6 +22,7 @@ export default class NavbarComponent extends Vue {}
 
 <style scoped>
 .container--flex {
+  display: flex;
   flex-wrap: wrap;
 }
 .title {
@@ -44,27 +43,11 @@ nav {
   row-gap: 1rem;
 }
 
-@media (min-width: 64rem) {
-  nav {
-    margin-top: 2.5rem;
-  }
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-
+.nav__buttons {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  column-gap: 3.5rem;
-  row-gap: 1.5rem;
-}
-
-.nav-buttons {
-  flex-wrap: wrap;
-  column-gap: 1.5rem;
-  row-gap: 1rem;
+  gap: 0.5rem;
 }
 
 .nav__button {
@@ -82,11 +65,15 @@ nav ul {
 
   text-transform: capitalize;
 
-  /* color: #f0f3fd; */
-  /* color: black; */
+  color: #f0f3fd;
 
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.nav__button:active {
+  color: #f0f3fd;
+  background: var(--vt-c-gray);
 }
 
 .nav__button--sign-up {
@@ -97,5 +84,25 @@ nav ul {
   line-height: 1.375rem;
 
   color: #047857;
+}
+
+@media (min-width: 32rem) {
+  .nav__button--sign-up {
+    margin-left: 2rem;
+  }
+}
+
+@media (min-width: 75rem) {
+  nav {
+    margin-top: 2.5rem;
+  }
+
+  .container--flex {
+    grid-column: 2/4;
+  }
+
+  .nav__buttons {
+    gap: 1.5rem;
+  }
 }
 </style>

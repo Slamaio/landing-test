@@ -57,8 +57,10 @@ export default class FooterComponent extends Vue {
 
 <style scoped>
 .container--flex {
+  display: flex;
   flex-wrap: wrap;
-  gap: 5.5rem;
+  gap: 2.25rem;
+  grid-column: 2;
 }
 
 .bio {
@@ -82,23 +84,6 @@ export default class FooterComponent extends Vue {
   gap: 0.75rem;
 }
 
-/* .logo > figure {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 0.25rem 0.25rem 1.5rem 0.25rem;
-}
-
-.fig-1 {
-  background: var(--vt-c-yellow);
-}
-
-.fig-2 {
-  margin-top: -1.75rem;
-  margin-left: 0.25rem;
-
-  background: var(--vt-c-turquoise);
-} */
-
 p {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
@@ -121,9 +106,9 @@ p {
   justify-content: center;
 }
 
-@media (max-width: 64rem) {
-  footer {
-    gap: 2rem;
+@media (min-width: 75rem) {
+  .container--flex {
+    gap: 5.5rem;
   }
 }
 </style>

@@ -25,11 +25,15 @@ export default class App extends Vue {}
 
 <style scoped>
 .container {
-  /* grid-column: 2; */
   grid-row: 1;
 
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+}
+
+.container > * {
+  width: 100%;
 }
 
 :nth-child(2) {

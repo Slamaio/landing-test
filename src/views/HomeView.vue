@@ -1,10 +1,10 @@
 <template>
   <main>
-    <RecommendationsComponent />
+    <!-- <RecommendationsComponent />
     <ReadyToSellComponent />
     <ReviewsComponent />
     <TipsAndTricksComponent />
-    <SubscribeComponent />
+    <SubscribeComponent /> -->
   </main>
 </template>
 

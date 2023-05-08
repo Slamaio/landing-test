@@ -10,18 +10,13 @@ body {
   display: flex;
 }
 
-.container--flex {
-  display: flex;
-}
-
 /* a {
   text-decoration: none;
 } */
 
-@media (min-width: 64rem) {
+@media (min-width: 75rem) {
   #app {
     display: grid;
-    /* grid-template-columns: 7.5rem 1fr 7.5rem; */
     grid-template-rows: 1fr 7.5rem;
 
     flex-grow: 1;
@@ -32,9 +27,5 @@ body {
   .grid--main {
     display: grid;
     grid-template-columns: 7.5rem 1fr 7.5rem;
-  }
-
-  .grid--main > * {
-    grid-column: 2;
   }
 }
