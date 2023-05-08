@@ -1,5 +1,5 @@
 <template>
-  <figure><img src="@/assets/images/image 6.svg" /></figure>
+  <figure><img src="@/assets/images/image_6.svg" /></figure>
 </template>
 
 <script lang="ts">
