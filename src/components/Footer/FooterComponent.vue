@@ -1,24 +1,23 @@
 <template>
-  <footer>
-    <article class="bio">
-      <div class="title">
-        <span class="logo">
-          <figure class="fig-1"></figure>
-          <figure class="fig-2"></figure>
-        </span>
-        <h1>Hounter</h1>
-      </div>
-      <p>
-        We provide information about properties such as houses, villas and apartments to help people
-        find their dream home
-      </p>
-      <div class="social">
-        <figure><IconFacebook /></figure>
-        <figure><IconTwitter /></figure>
-        <figure><IconInstagram /></figure>
-      </div>
-    </article>
-    <FooterItemComponent v-for="(item, index) in footerItems" :key="index" :content="item" />
+  <footer class="grid--main">
+    <div class="container--flex">
+      <article class="bio">
+        <div class="title">
+          <img alt="Hounter logo" src="@/assets/logo.svg" width="36" height="36" />
+          <h1>Hounter</h1>
+        </div>
+        <p>
+          We provide information about properties such as houses, villas and apartments to help
+          people find their dream home
+        </p>
+        <div class="social">
+          <figure><IconFacebook /></figure>
+          <figure><IconTwitter /></figure>
+          <figure><IconInstagram /></figure>
+        </div>
+      </article>
+      <FooterItemComponent v-for="(item, index) in footerItems" :key="index" :content="item" />
+    </div>
   </footer>
 </template>
 
@@ -57,8 +56,7 @@ export default class FooterComponent extends Vue {
 </script>
 
 <style scoped>
-footer {
-  display: flex;
+.container--flex {
   flex-wrap: wrap;
   gap: 5.5rem;
 }
@@ -84,7 +82,7 @@ footer {
   gap: 0.75rem;
 }
 
-.logo > figure {
+/* .logo > figure {
   width: 2rem;
   height: 2rem;
   border-radius: 0.25rem 0.25rem 1.5rem 0.25rem;
@@ -99,7 +97,7 @@ footer {
   margin-left: 0.25rem;
 
   background: var(--vt-c-turquoise);
-}
+} */
 
 p {
   margin-top: 1rem;

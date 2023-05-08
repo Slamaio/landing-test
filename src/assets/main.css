@@ -2,9 +2,15 @@
 
 #app {
   font-weight: normal;
+  padding: 2rem;
+  display: flex;
 }
 
 body {
+  display: flex;
+}
+
+.container--flex {
   display: flex;
 }
 
@@ -15,16 +21,20 @@ body {
 @media (min-width: 64rem) {
   #app {
     display: grid;
-    grid-template-columns: 7.5rem 1fr 7.5rem;
+    /* grid-template-columns: 7.5rem 1fr 7.5rem; */
     grid-template-rows: 1fr 7.5rem;
 
     flex-grow: 1;
-  }
-}
 
-@media (max-width: 64rem) {
-  #app {
-    padding: 2rem;
-    display: flex;
+    padding: 0;
+  }
+
+  .grid--main {
+    display: grid;
+    grid-template-columns: 7.5rem 1fr 7.5rem;
+  }
+
+  .grid--main > * {
+    grid-column: 2;
   }
 }

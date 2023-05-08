@@ -10,7 +10,7 @@
 import { RouterView } from 'vue-router'
 import { Component, Vue } from 'vue-facing-decorator'
 
-import HeaderComponent from '@/components/HeaderComponent.vue'
+import HeaderComponent from '@/components/Header/HeaderComponent.vue'
 import FooterComponent from '@/components/Footer/FooterComponent.vue'
 
 @Component({
@@ -25,7 +25,7 @@ export default class App extends Vue {}
 
 <style scoped>
 .container {
-  grid-column: 2;
+  /* grid-column: 2; */
   grid-row: 1;
 
   display: flex;
