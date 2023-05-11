@@ -14,25 +14,31 @@
 import { Component, Vue } from 'vue-facing-decorator'
 import HighlightsItemComponent from './HighlightsItemComponent.vue'
 
+import { Carousel, Navigation, Slide } from 'vue3-carousel'
+import 'vue3-carousel/dist/carousel.css'
+
 @Component({
   components: {
     HighlightsItemComponent,
+    Carousel,
+    Slide,
+    Navigation,
   },
 })
 export default class HighlightsComponent extends Vue {
   highlightsItems = [
     {
-      img: '',
+      img: 'https://picsum.photos/56',
       title: '1K+ People',
       text: 'Successfully Getting Home',
     },
     {
-      img: '',
+      img: 'https://picsum.photos/56',
       title: '56 Houses',
       text: 'Sold Monthly',
     },
     {
-      img: '',
+      img: 'https://picsum.photos/56',
       title: '4K+',
       text: 'People Looking for New Homes',
     },

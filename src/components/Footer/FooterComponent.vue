@@ -55,27 +55,86 @@ export default class FooterComponent extends Vue {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+// .container--flex {
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 2.25rem;
+//   grid-column: 2;
+// }
+
+// .bio {
+//   margin-right: auto;
+//   flex-basis: 15rem;
+//   flex-grow: 1;
+
+//   max-width: 20rem;
+// }
+
+// .bio > h1 {
+//   color: var(--vt-c-blue);
+//   font-weight: 700;
+//   line-height: 1.25rem;
+//   text-transform: capitalize;
+// }
+
+// .title {
+//   display: flex;
+//   align-items: center;
+//   gap: 0.75rem;
+// }
+
+// p {
+//   margin-top: 1rem;
+//   margin-bottom: 1.5rem;
+
+//   font-size: 14px;
+//   line-height: 24px;
+//   color: var(--vt-c-gray-soft);
+// }
+
+// .social {
+//   display: flex;
+//   gap: 24px;
+// }
+
+// .social > figure {
+//   display: flex;
+//   width: 32px;
+//   height: 32px;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// @media (min-width: 75rem) {
+//   .container--flex {
+//     gap: 5.5rem;
+//   }
+// }
+
 .container--flex {
   display: flex;
   flex-wrap: wrap;
   gap: 2.25rem;
   grid-column: 2;
+
+  @media (min-width: 75rem) {
+    gap: 5.5rem;
+  }
 }
 
 .bio {
   margin-right: auto;
   flex-basis: 15rem;
   flex-grow: 1;
-
   max-width: 20rem;
-}
 
-.bio > h1 {
-  color: var(--vt-c-blue);
-  font-weight: 700;
-  line-height: 1.25rem;
-  text-transform: capitalize;
+  > h1 {
+    color: var(--vt-c-blue);
+    font-weight: 700;
+    line-height: 1.25rem;
+    text-transform: capitalize;
+  }
 }
 
 .title {
@@ -87,7 +146,6 @@ export default class FooterComponent extends Vue {
 p {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
-
   font-size: 14px;
   line-height: 24px;
   color: var(--vt-c-gray-soft);
@@ -96,19 +154,13 @@ p {
 .social {
   display: flex;
   gap: 24px;
-}
 
-.social > figure {
-  display: flex;
-  width: 32px;
-  height: 32px;
-  align-items: center;
-  justify-content: center;
-}
-
-@media (min-width: 75rem) {
-  .container--flex {
-    gap: 5.5rem;
+  > figure {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
   }
 }
 </style>

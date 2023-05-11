@@ -1,17 +1,17 @@
 <template>
   <main>
-    <!-- <RecommendationsComponent />
+    <RecommendationsComponent />
     <ReadyToSellComponent />
-    <ReviewsComponent />
+    <!-- <ReviewsComponent /> -->
     <TipsAndTricksComponent />
-    <SubscribeComponent /> -->
+    <SubscribeComponent />
   </main>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-facing-decorator'
 
-import RecommendationsComponent from '@/components/RecommendationsComponent.vue'
+import RecommendationsComponent from '@/components/Recommendations/RecommendationsComponent.vue'
 import ReadyToSellComponent from '@/components/ReadyToSellComponent.vue'
 import ReviewsComponent from '@/components/ReviewsComponent.vue'
 import TipsAndTricksComponent from '@/components/TipsAndTricksComponent.vue'
@@ -33,5 +33,9 @@ export default class HomeView extends Vue {}
 main {
   display: flex;
   flex-direction: column;
+  gap: 7.5rem;
+
+  /* flex-wrap: wrap; */
+  /* height: 100px; */
 }
 </style>

@@ -22,7 +22,7 @@ import PartnershipComponent from './PartnershipComponent.vue'
 export default class TitleSearchComponent extends Vue {}
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 article {
   display: flex;
   flex-direction: column;
@@ -32,11 +32,10 @@ article {
 
   max-width: 31rem;
   grid-column: 2/3;
-}
 
-@media (min-width: 75rem) {
-  article {
+  @media (min-width: 75rem) {
     margin-top: 6rem;
+    margin-bottom: 5.75rem;
   }
 }
 </style>

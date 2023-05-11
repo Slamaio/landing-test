@@ -33,6 +33,9 @@ article {
 }
 
 img {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1.5rem;
 }
 
 .container--flex {

@@ -8,7 +8,28 @@
 
 body {
   display: flex;
+  flex-direction: column;
 }
+
+button {
+  cursor: pointer !important;
+  border: none;
+}
+
+button:active,
+button:hover {
+  color: #f0f3fd !important;
+  background-color: var(--vt-c-gray) !important;
+  border-color: var(--vt-c-gray) !important;
+}
+
+.carousel__track {
+  gap: 2.5rem;
+}
+
+/* .carousel__slide {
+  width: fit-content !important;
+} */
 
 /* a {
   text-decoration: none;
@@ -17,11 +38,16 @@ body {
 @media (min-width: 75rem) {
   #app {
     display: grid;
+    /* grid-template-columns: 7.5rem 1fr 7.5rem; */
     grid-template-rows: 1fr 7.5rem;
 
-    flex-grow: 1;
+    /* flex-grow: 1; */
 
     padding: 0;
+  }
+
+  #app > * {
+    grid-row: 1;
   }
 
   .grid--main {

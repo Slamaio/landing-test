@@ -1,9 +1,13 @@
 <template>
   <header>
+    <!-- <div class="color-blur">
+      <figure class="vector vector--1"></figure>
+      <figure class="vector vector--2"></figure>
+    </div> -->
     <ImgComponent />
     <NavbarComponent />
     <TitleSearchComponent />
-    <HighlightsComponent />
+    <!-- <HighlightsComponent /> -->
   </header>
 </template>
 
@@ -25,14 +29,32 @@ import HighlightsComponent from './Highlights/HighlightsComponent.vue'
 export default class HeaderComponent extends Vue {}
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 header {
   position: relative;
-  /* min-height: 720px; */
-}
 
-@media (min-width: 75rem) {
-  header {
+  .color-blur {
+    position: relative;
+
+    .vector {
+      position: absolute;
+      width: 438px;
+      height: 494px;
+
+      opacity: 0.3;
+      transform: rotate(90deg);
+
+      &--1 {
+        background: #82ffd2;
+      }
+
+      &--2 {
+        background: #82f7ff;
+      }
+    }
+  }
+
+  @media (min-width: 75rem) {
     display: grid;
     grid-template-columns: 7.5rem 1fr 1fr 7.5rem;
   }

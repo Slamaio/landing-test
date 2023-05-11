@@ -23,7 +23,7 @@ import IconArrowForward from '@/components/icons/IconArrowForward.vue'
 export default class SearchComponent extends Vue {}
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .search {
   display: flex;
   align-items: center;
@@ -33,50 +33,43 @@ export default class SearchComponent extends Vue {}
   background: var(--vt-c-white);
   border: 1px solid #e0e3eb;
   border-radius: 2rem;
-}
 
-.search__icon {
-  width: 1.5rem;
-  height: 1.5rem;
-}
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 
-.search__input {
-  flex: 1;
-  font-weight: 500;
-  font-size: 0.75rem;
-  line-height: 157%;
+  &__input {
+    flex: 1;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 157%;
 
-  width: 0;
+    width: 0;
 
-  color: var(--vt-c-gray-mute);
-  border: none;
-}
+    color: var(--vt-c-gray-mute);
+    border: none;
 
-.search__input:focus {
-  outline: none;
-}
+    &:focus {
+      outline: none;
+    }
+  }
 
-.search__button {
-  cursor: pointer;
+  &__button {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    gap: 0.4rem;
 
-  display: flex;
-  align-items: center;
-  padding: 0.75rem 1rem;
-  gap: 0.4rem;
+    background: var(--vt-c-green-soft);
+    border: none;
+    border-radius: 2rem;
 
-  background: var(--vt-c-green-soft);
-  border: none;
-  border-radius: 2rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 157%;
 
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 157%;
-
-  color: var(--vt-c-white);
-}
-
-.search__button:active {
-  color: #f0f3fd;
-  background: var(--vt-c-gray);
+    color: var(--vt-c-white);
+  }
 }
 </style>

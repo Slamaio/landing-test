@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container--flex">
     <HeaderComponent />
     <RouterView />
     <FooterComponent />
@@ -24,19 +24,16 @@ export default class App extends Vue {}
 </script>
 
 <style scoped>
-.container {
-  grid-row: 1;
+.container--flex {
+  /* grid-column: span 3; */
 
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: column; */
+
+  gap: 7.5rem;
 }
 
-.container > * {
+.container--flex > * {
   width: 100%;
-}
-
-:nth-child(2) {
-  flex-grow: 1;
 }
 </style>

@@ -9,7 +9,7 @@ import { Component, Vue } from 'vue-facing-decorator'
 export default class ImgComponent extends Vue {}
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 figure {
   margin: -2rem;
   width: calc(100% + 4rem);
@@ -34,9 +34,9 @@ img {
 @media (min-width: 75rem) {
   figure {
     grid-column: 3;
-    margin: 0rem 0rem 0rem 0rem;
-    width: calc(100%);
-    height: calc(100%);
+    margin: 0rem;
+    width: 100%;
+    height: 100%;
   }
 
   img {
@@ -45,26 +45,36 @@ img {
 }
 
 /* figure {
+  margin: -2rem;
+  width: calc(100% + 4rem);
+  height: calc(100% + 2rem);
   position: absolute;
   top: 0;
   right: 0;
-  grid-column: 3/5;
+  left: 0;
   z-index: -1;
 }
+
 img {
-  border-radius: 0px 0px 0px 5rem;
-  max-width: calc(100% + 4rem);
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+
+  border-radius: 0rem 0rem 0rem 5rem;
+
+  filter: brightness(90%);
 }
 
-@media (max-width: 64rem) {
+@media (min-width: 75rem) {
   figure {
-    opacity: 0.4;
-    background-color: #000;
-    grid-column: 1;
+    grid-column: 3;
+    margin: 0rem;
+    width: 100%;
+    height: 100%;
   }
+
   img {
-    margin: -2rem;
+    border-radius: 0rem 0rem 0rem 5rem;
   }
 } */
 </style>
