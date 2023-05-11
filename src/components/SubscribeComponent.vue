@@ -9,6 +9,27 @@
           <button class="subscribe__button">Subsribe Now</button>
         </div>
       </div>
+      <div class="flex-break"></div>
+      <div class="blob-group blob-group--1">
+        <div class="column">
+          <img src="https://picsum.photos/81" alt="" class="blob" />
+          <img src="https://picsum.photos/36" alt="" class="blob" />
+        </div>
+        <div class="column">
+          <img src="https://picsum.photos/36" alt="" class="blob" />
+          <img src="https://picsum.photos/54" alt="" class="blob" />
+        </div>
+      </div>
+      <div class="blob-group blob-group--2">
+        <div class="column">
+          <img src="https://picsum.photos/70" alt="" class="blob" />
+          <img src="https://picsum.photos/36" alt="" class="blob" />
+        </div>
+        <div class="column">
+          <img src="https://picsum.photos/36" alt="" class="blob" />
+          <img src="https://picsum.photos/55" alt="" class="blob" />
+        </div>
+      </div>
     </article>
   </section>
 </template>
@@ -28,9 +49,12 @@ export default class SubscribeComponent extends Vue {}
 <style scoped lang="scss">
 .container--flex {
   grid-column: 2;
+
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  gap: 1.25rem;
   border-radius: 2rem;
   background: linear-gradient(220deg, rgba(145, 184, 249, 0.3), rgba(255, 0, 0, 0) 10%),
     linear-gradient(270deg, rgba(232, 230, 239, 0.8), rgb(242, 253, 249), rgba(0, 255, 0, 0) 70%),
@@ -40,7 +64,50 @@ export default class SubscribeComponent extends Vue {}
       rgba(232, 230, 239, 0.8),
       rgba(255, 0, 0, 0) 80%
     );
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
+
+  @media (min-width: 64rem) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+
+.flex-break {
+  flex-basis: 100%;
+  width: 0;
+  @media (min-width: 64rem) {
+    display: none;
+  }
+}
+
+.blob-group {
+  display: flex;
+  gap: 3rem;
+  flex-grow: 0.25;
+  justify-content: center;
+
+  @media (min-width: 64rem) {
+    &--1 {
+      order: 1;
+    }
+
+    &--2 {
+      order: 3;
+    }
+  }
+}
+
+.blob-group > .column {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: space-evenly;
+}
+
+.blob {
+  border-radius: 1.5rem;
+  border: 2px solid #ffffff;
+  filter: drop-shadow(0px 9px 32px rgba(89, 92, 219, 0.1));
 }
 
 .content {
@@ -48,6 +115,10 @@ export default class SubscribeComponent extends Vue {}
   flex-direction: column;
   max-width: 31rem;
   gap: 2rem;
+
+  @media (min-width: 64rem) {
+    order: 2;
+  }
 }
 
 h1 {

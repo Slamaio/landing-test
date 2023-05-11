@@ -50,26 +50,37 @@ export default class RecommendationCardComponent extends Vue {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 article {
   position: relative;
 
   display: flex;
   flex-direction: column;
 
-  flex-shrink: 0;
   gap: 1.5rem;
   border-radius: 2px;
 }
 
 .image {
   height: 382px;
-  width: 340px;
+  max-width: 100%;
+  /* height: auto; */
 }
 
+// @media (max-width: 32rem) {
+//   .image {
+//     height: auto;
+//     width: 300px;
+//   }
+// }
+
 .image > img {
+  max-width: 90vw;
+  height: 382px;
   border-radius: 1.5rem;
   z-index: -1;
+
+  object-fit: cover;
 }
 
 .tag {

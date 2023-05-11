@@ -2,7 +2,7 @@
   <main>
     <RecommendationsComponent />
     <ReadyToSellComponent />
-    <!-- <ReviewsComponent /> -->
+    <ReviewsComponent />
     <TipsAndTricksComponent />
     <SubscribeComponent />
   </main>
@@ -13,8 +13,8 @@ import { Component, Vue } from 'vue-facing-decorator'
 
 import RecommendationsComponent from '@/components/Recommendations/RecommendationsComponent.vue'
 import ReadyToSellComponent from '@/components/ReadyToSellComponent.vue'
-import ReviewsComponent from '@/components/ReviewsComponent.vue'
-import TipsAndTricksComponent from '@/components/TipsAndTricksComponent.vue'
+import ReviewsComponent from '@/components/UserReviews/ReviewsComponent.vue'
+import TipsAndTricksComponent from '@/components/TipsAndTricks/TipsAndTricksComponent.vue'
 import SubscribeComponent from '@/components/SubscribeComponent.vue'
 
 @Component({
@@ -29,13 +29,10 @@ import SubscribeComponent from '@/components/SubscribeComponent.vue'
 export default class HomeView extends Vue {}
 </script>
 
-<style scoped>
+<style>
 main {
   display: flex;
   flex-direction: column;
   gap: 7.5rem;
-
-  /* flex-wrap: wrap; */
-  /* height: 100px; */
 }
 </style>

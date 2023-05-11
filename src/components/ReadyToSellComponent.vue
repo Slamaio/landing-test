@@ -145,7 +145,9 @@ export default class ReadyToSellComponent extends Vue {}
 
       .row {
         display: flex;
-        gap: 3.25rem;
+        flex-wrap: wrap;
+        column-gap: 3.25rem;
+        row-gap: 1rem;
       }
 
       .detail__info {
@@ -167,8 +169,10 @@ export default class ReadyToSellComponent extends Vue {}
 
     .info__contact-info {
       display: flex;
+      flex-wrap: wrap;
       max-width: 27.5rem;
-      justify-content: space-between;
+      row-gap: 0.5rem;
+      justify-content: center;
 
       p {
         font-size: 1rem;
@@ -186,6 +190,10 @@ export default class ReadyToSellComponent extends Vue {}
         font-size: 0.875rem;
         line-height: 157%;
         color: #ffffff;
+      }
+
+      @media (min-width: 25.5rem) {
+        justify-content: space-between;
       }
     }
   }

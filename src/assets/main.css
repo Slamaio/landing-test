@@ -23,14 +23,6 @@ button:hover {
   border-color: var(--vt-c-gray) !important;
 }
 
-.carousel__track {
-  gap: 2.5rem;
-}
-
-/* .carousel__slide {
-  width: fit-content !important;
-} */
-
 /* a {
   text-decoration: none;
 } */
@@ -38,10 +30,7 @@ button:hover {
 @media (min-width: 75rem) {
   #app {
     display: grid;
-    /* grid-template-columns: 7.5rem 1fr 7.5rem; */
     grid-template-rows: 1fr 7.5rem;
-
-    /* flex-grow: 1; */
 
     padding: 0;
   }

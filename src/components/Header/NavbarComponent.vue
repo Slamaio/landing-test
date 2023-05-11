@@ -7,7 +7,14 @@
     <div class="nav__buttons">
       <button class="nav__button">About Us</button>
       <button class="nav__button">Article</button>
-      <button class="nav__button">Property</button>
+      <button class="nav__button nav__button--dropdown">
+        Property <IconArrowDown />
+        <div class="dropdown-content">
+          <a href="#">House</a>
+          <a href="#">Villa</a>
+          <a href="#">Apartment</a>
+        </div>
+      </button>
       <button class="nav__button nav__button--sign-up">Sign Up!</button>
     </div>
   </nav>
@@ -16,7 +23,13 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-facing-decorator'
 
-@Component({})
+import IconArrowDown from '@/components/icons/IconArrowDown.vue'
+
+@Component({
+  components: {
+    IconArrowDown,
+  },
+})
 export default class NavbarComponent extends Vue {}
 </script>
 
@@ -65,6 +78,52 @@ export default class NavbarComponent extends Vue {}
 
         background: rgba(255, 255, 255, 0.1);
         border: 1px solid rgba(255, 255, 255, 0.3);
+
+        &--dropdown {
+          position: relative;
+
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            top: calc(2.25rem - 2px);
+            left: -1px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-top: none;
+            width: calc(100% + 2px);
+            z-index: 1;
+          }
+
+          &:hover {
+            border-radius: 1.25rem 1.25rem 0rem 0rem;
+            background: rgba(255, 255, 255, 0.1) !important;
+            border-color: rgba(255, 255, 255, 0.3) !important;
+            border-bottom: none !important;
+
+            .dropdown-content {
+              display: block;
+              // flex-direction: column;
+
+              a {
+                display: block;
+                padding: 0.5rem 1rem;
+
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 0.875rem;
+                line-height: 1.125rem;
+
+                text-transform: capitalize;
+
+                color: #f0f3fd;
+
+                &:hover {
+                  background-color: var(--vt-c-gray);
+                }
+              }
+            }
+          }
+        }
 
         &--sign-up {
           align-items: center;

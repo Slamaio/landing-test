@@ -23,7 +23,6 @@ export default class HighlightsItemComponent extends Vue {
 article {
   display: flex;
   align-items: center;
-  flex-shrink: 0;
   padding: 1.5rem;
   gap: 1rem;
 
@@ -56,6 +55,6 @@ p {
   font-size: 0.75rem;
   line-height: 167%;
   color: #68799f;
-  align-self: stretch;
+  /* align-self: stretch; */
 }
 </style>

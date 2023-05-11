@@ -9,30 +9,42 @@
         <h1>Featured House</h1>
       </div>
       <div class="category">
-        <button class="category__button button--green">House</button>
-        <button class="category__button">Villa</button>
-        <button class="category__button">Apartment</button>
+        <button
+          class="category__button"
+          :class="category == 'house' ? 'button--green' : ''"
+          @click="category = 'house'"
+        >
+          House
+        </button>
+        <button
+          class="category__button"
+          :class="category == 'villa' ? 'button--green' : ''"
+          @click="category = 'villa'"
+        >
+          Villa
+        </button>
+        <button
+          class="category__button"
+          :class="category == 'apartment' ? 'button--green' : ''"
+          @click="category = 'apartment'"
+        >
+          Apartment
+        </button>
       </div>
       <div class="arrow">
-        <button class="arrow__button"><IconArrowBack /></button>
-        <button class="arrow__button"><IconArrowForward /></button>
+        <button class="arrow__button" @click="carousel.prev"><IconArrowBack /></button>
+        <button class="arrow__button" @click="carousel.next"><IconArrowForward /></button>
       </div>
     </div>
     <div class="house" ref="house">
-      <!-- <RecommendationCardComponent
-        v-for="(slide, index) in recommendationsList"
-        :key="index"
-        class="carousel__item"
-        :item="slide"
-      /> -->
+      <CarouselComponent ref="carousel" v-model="displayRecommendations">
+        <template #slides>
+          <div class="slide" v-for="(slide, index) in displayRecommendations" :key="index">
+            <RecommendationCardComponent :item="slide" />
+          </div>
+        </template>
+      </CarouselComponent>
     </div>
-    <!-- <div class="house" ref="house">
-      <Carousel :items-to-show="itemsToShow" :wrap-around="true" :snapAlign="'start'">
-        <Slide v-for="(slide, index) in recommendationsList" :key="index">
-          <RecommendationCardComponent class="carousel__item" :item="slide" />
-        </Slide>
-      </Carousel>
-    </div> -->
   </section>
 </template>
 
@@ -41,77 +53,113 @@ import { Component, Ref, Vue } from 'vue-facing-decorator'
 import IconArrowBack from '@/components/icons/IconArrowBack.vue'
 import IconArrowForward from '@/components/icons/IconArrowForward.vue'
 import RecommendationCardComponent from './RecommendationCardComponent.vue'
-
-import { Carousel, Navigation, Slide } from 'vue3-carousel'
-import 'vue3-carousel/dist/carousel.css'
+import CarouselComponent from '../CarouselComponent.vue'
 
 @Component({
   components: {
     IconArrowBack,
     IconArrowForward,
     RecommendationCardComponent,
-
-    Carousel,
-    Slide,
-    Navigation,
+    CarouselComponent,
   },
 })
 export default class RecommendationsComponent extends Vue {
   @Ref('house') house!: HTMLDivElement
+  @Ref('carousel') carousel!: any
 
   itemsToShow = 0
 
   currIndex = 0
-  type = 'house'
+  category = 'house'
   recommendationsList = [
     {
-      img: 'https://picsum.photos/340/382',
-      title: 'Title_test',
-      price: 'Price_test',
-      tag: 'Tag_test',
+      category: 'house',
+      img: 'https://picsum.photos/id/237/340/382',
+      title: 'House 1',
+      price: 'price',
+      tag: 'tag',
       seller: {
         avatar: 'https://picsum.photos/40',
-        name: 'Name_test',
-        location: 'Location_test',
+        name: 'name',
+        location: 'location',
       },
     },
     {
-      img: 'https://picsum.photos/340/382',
-      title: 'Title_test',
-      price: 'Price_test',
-      tag: 'Tag_test',
+      category: 'house',
+      img: 'https://picsum.photos/id/236/340/382',
+      title: 'House 2',
+      price: 'price',
+      tag: 'tag',
       seller: {
         avatar: 'https://picsum.photos/40',
-        name: 'Name_test',
-        location: 'Location_test',
+        name: 'name',
+        location: 'location',
       },
     },
     {
-      img: 'https://picsum.photos/340/382',
-      title: 'Title_test',
-      price: 'Price_test',
-      tag: 'Tag_test',
+      category: 'house',
+      img: 'https://picsum.photos/id/235/340/382',
+      title: 'House 3',
+      price: 'price',
+      tag: 'tag',
       seller: {
         avatar: 'https://picsum.photos/40',
-        name: 'Name_test',
-        location: 'Location_test',
+        name: 'name',
+        location: 'location',
       },
     },
     {
-      img: 'https://picsum.photos/340/382',
-      title: 'Title_test',
-      price: 'Price_test',
-      tag: 'Tag_test',
+      category: 'house',
+      img: 'https://picsum.photos/id/234/340/382',
+      title: 'House 4',
+      price: 'price',
+      tag: 'tag',
       seller: {
         avatar: 'https://picsum.photos/40',
-        name: 'Name_test',
-        location: 'Location_test',
+        name: 'name',
+        location: 'location',
+      },
+    },
+    {
+      category: 'house',
+      img: 'https://picsum.photos/id/233/340/382',
+      title: 'House 5',
+      price: 'price',
+      tag: 'tag',
+      seller: {
+        avatar: 'https://picsum.photos/40',
+        name: 'name',
+        location: 'location',
+      },
+    },
+    {
+      category: 'villa',
+      img: 'https://picsum.photos/id/237/340/382',
+      title: 'Villa 1',
+      price: 'price',
+      tag: 'tag',
+      seller: {
+        avatar: 'https://picsum.photos/40',
+        name: 'name',
+        location: 'location',
+      },
+    },
+    {
+      category: 'apartment',
+      img: 'https://picsum.photos/id/236/340/382',
+      title: 'Apartment 2',
+      price: 'price',
+      tag: 'tag',
+      seller: {
+        avatar: 'https://picsum.photos/40',
+        name: 'name',
+        location: 'location',
       },
     },
   ]
 
   get displayRecommendations() {
-    return this.recommendationsList
+    return this.recommendationsList.filter((rec) => rec.category == this.category)
   }
 
   mounted() {
@@ -124,13 +172,8 @@ export default class RecommendationsComponent extends Vue {
 </script>
 
 <style scoped>
-.container--flex {
-  display: flex;
-  flex-direction: column;
-  row-gap: 2.5rem;
-}
-
 section {
+  display: grid;
   row-gap: 2.5rem;
 }
 
@@ -237,13 +280,13 @@ section {
   display: flex;
   gap: 2.5rem;
   overflow: hidden;
+  max-width: calc(100vw - 2rem);
 
-  margin: 0rem -2rem;
-  /* margin-right: 0rem; */
+  margin: 0rem -2rem 0rem 0rem;
 }
 
-.carousel {
-  max-width: calc(100vw - 2rem);
+.house:deep(.inner) {
+  gap: 2.5rem;
 }
 
 @media (min-width: 75rem) {
@@ -253,14 +296,6 @@ section {
   .house {
     margin-left: 2.5rem;
     margin-right: 0rem;
-  }
-
-  .carousel {
-    max-width: calc(100vw - 4.5rem);
-  }
-
-  .carousel__slide {
-    width: 340px !important;
   }
 }
 </style>
