@@ -57,7 +57,7 @@ export default class ReviewCardComponent extends Vue {
 }
 
 .cover {
-  max-width: 90vw;
+  max-width: 90svw;
   z-index: -1;
   background: #c4c4c4;
   opacity: 0.7;

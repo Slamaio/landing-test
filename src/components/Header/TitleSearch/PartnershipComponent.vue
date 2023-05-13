@@ -2,10 +2,10 @@
   <figure>
     <figcaption>Our Partnership</figcaption>
     <div class="partnerships">
-      <img src="@/assets/images/traveloka_logo.svg" />
-      <img src="@/assets/images/tiket_logo.svg" />
-      <img src="@/assets/images/airbnb_logo.svg" />
-      <img src="@/assets/images/tripadvisor_logo.svg" />
+      <img src="@/assets/images/logos/traveloka_logo.svg" />
+      <img src="@/assets/images/logos/tiket_logo.svg" />
+      <img src="@/assets/images/logos/airbnb_logo.svg" />
+      <img src="@/assets/images/logos/tripadvisor_logo.svg" />
     </div>
   </figure>
 </template>

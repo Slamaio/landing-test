@@ -111,7 +111,7 @@ section {
   overflow: hidden;
   grid-column: 1/4;
   margin: 0rem -2rem;
-  max-width: calc(100vw + 2rem);
+  max-width: calc(100svw + 2rem);
 
   :deep(.inner) {
     margin-left: 2rem;

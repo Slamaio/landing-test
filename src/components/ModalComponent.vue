@@ -32,7 +32,7 @@ export default class ModalComponent extends Vue {
 
   .modal-content {
     background-color: #fff;
-    max-width: 80vw;
+    max-width: 80svw;
     max-height: 80vh;
     padding: 1.25rem;
     z-index: 9999;
