@@ -47,10 +47,9 @@ This will create a dist folder with the optimized and minified files for deploym
 
 ## Deployment
 
-To deploy the project to GitHub Pages, use the following commands:
+To deploy the project to GitHub Pages, use the following command:
 
 ```bash
-npm run predeploy
 npm run deploy
 ```
 
