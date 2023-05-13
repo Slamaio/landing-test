@@ -31,6 +31,10 @@ export default class TitleComponent extends Vue {}
     line-height: 3.125rem;
     text-transform: capitalize;
     color: var(--color-heading);
+
+    span {
+      color: var(--vt-c-yellow);
+    }
   }
 
   p {

@@ -2,7 +2,10 @@
   <section class="grid--main">
     <article class="container--flex">
       <div class="content">
-        <h1>Subscribe For More Info and update from Hounter</h1>
+        <h1>
+          Subscribe For More Info <br />
+          and update from Hounter
+        </h1>
         <div class="subscribe">
           <Icon class="subscribe__icon" icon="eva:email-fill" color="#3b82f6" />
           <input
@@ -85,10 +88,18 @@ $background-gradient: linear-gradient(220deg, rgba(145, 184, 249, 0.3), rgba(255
 }
 
 .blob-group {
-  display: flex;
+  display: grid;
+  margin-top: -2rem;
+
   gap: 3rem;
   flex-grow: 0.25;
   justify-content: center;
+
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  gap: 3rem;
+  justify-items: center;
+  align-items: center;
 
   @media (min-width: 64rem) {
     &--1 {
@@ -99,16 +110,6 @@ $background-gradient: linear-gradient(220deg, rgba(145, 184, 249, 0.3), rgba(255
       order: 3;
     }
   }
-}
-
-.blob-group {
-  display: grid;
-
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
-  gap: 3rem;
-  justify-items: center;
-  align-items: center;
 }
 
 .blob {
