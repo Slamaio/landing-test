@@ -28,6 +28,7 @@ export default class App extends Vue {}
   display: flex;
   flex-wrap: wrap;
   gap: 7.5rem;
+  max-width: calc(100vw - (100vw - 100%));
 
   > * {
     width: 100%;

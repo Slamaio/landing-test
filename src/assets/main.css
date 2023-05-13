@@ -28,7 +28,7 @@ a {
 }
 
 .color-blur > .vector {
-  max-width: 100svw;
+  max-width: calc(100vw - (100vw - 100%));
 }
 
 @media (min-width: 75rem) {
