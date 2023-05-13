@@ -1,7 +1,7 @@
 <template>
   <nav class="container--flex">
     <div class="title">
-      <img alt="Hounter logo" src="@/assets/logo.svg" width="36" height="36" />
+      <img alt="Hounter logo" src="@/assets/images/logo.svg" width="36" height="36" />
       <h1>Hounter</h1>
     </div>
     <div class="nav__buttons">

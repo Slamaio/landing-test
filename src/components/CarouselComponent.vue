@@ -204,7 +204,7 @@ export default class CarouselComponent extends Vue {
   .inner {
     display: flex;
     transition: transform 0.2s;
-    max-width: calc(100vw - 2rem);
+    max-width: calc(100svw - 2rem);
 
     .slide {
       display: inline-flex;

@@ -218,7 +218,7 @@ section {
   display: flex;
   gap: 2.5rem;
   overflow: hidden;
-  max-width: calc(100vw - 2.5rem);
+  max-width: calc(100svw - 2rem);
 
   margin: 0rem -2rem 0rem 0rem;
 }

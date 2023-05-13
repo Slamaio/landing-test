@@ -41,7 +41,7 @@ export default class HighlightsComponent extends Vue {
   display: flex;
   align-self: flex-end;
   overflow: hidden;
-  max-width: calc(100vw - 3rem);
+  max-width: calc(100svw - 3rem);
 
   margin: 3rem -2rem 3rem 1rem;
 

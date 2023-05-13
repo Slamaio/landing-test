@@ -17,13 +17,17 @@
           <div class="house-detail">
             <b>House Detail</b>
             <div class="row">
-              <div class="detail__info"><img src="@/assets/images/bed.svg" />4 Bedrooms</div>
-              <div class="detail__info"><img src="@/assets/images/bath.svg" />2 Bathrooms</div>
+              <div class="detail__info"><img src="@/assets/images/icons/bed.svg" />4 Bedrooms</div>
+              <div class="detail__info">
+                <img src="@/assets/images/icons/bath.svg" />2 Bathrooms
+              </div>
             </div>
             <div class="row">
-              <div class="detail__info"><img src="@/assets/images/car-garage.svg" />1 Carport</div>
               <div class="detail__info">
-                <img src="@/assets/images/stairs-with-handrail.svg" />2 Floors
+                <img src="@/assets/images/icons/car-garage.svg" />1 Carport
+              </div>
+              <div class="detail__info">
+                <img src="@/assets/images/icons/stairs-with-handrail.svg" />2 Floors
               </div>
             </div>
           </div>

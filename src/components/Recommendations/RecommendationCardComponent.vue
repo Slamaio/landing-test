@@ -63,7 +63,7 @@ article {
 }
 
 .image > img {
-  max-width: 90vw;
+  max-width: 90svw;
   height: 382px;
   border-radius: 1.5rem;
   z-index: -1;
