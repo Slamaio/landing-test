@@ -42,7 +42,6 @@ ul {
 
   font-size: 0.875rem;
   line-height: 1.125rem;
-  text-transform: capitalize;
 
   color: var(--vt-c-gray-mute);
 }

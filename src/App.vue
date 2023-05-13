@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container--flex">
     <HeaderComponent />
     <RouterView />
     <FooterComponent />
@@ -10,7 +10,7 @@
 import { RouterView } from 'vue-router'
 import { Component, Vue } from 'vue-facing-decorator'
 
-import HeaderComponent from '@/components/HeaderComponent.vue'
+import HeaderComponent from '@/components/Header/HeaderComponent.vue'
 import FooterComponent from '@/components/Footer/FooterComponent.vue'
 
 @Component({
@@ -24,15 +24,14 @@ export default class App extends Vue {}
 </script>
 
 <style scoped>
-.container {
-  grid-column: 2;
-  grid-row: 1;
-
+.container--flex {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+
+  gap: 7.5rem;
 }
 
-:nth-child(2) {
-  flex-grow: 1;
+.container--flex > * {
+  width: 100%;
 }
 </style>
