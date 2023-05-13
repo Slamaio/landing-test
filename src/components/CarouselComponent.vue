@@ -40,10 +40,14 @@ export default class CarouselComponent extends Vue {
     }
 
     if (this.drag) {
-      this.inner.addEventListener('mousedown', this.handleDragStart)
-      this.inner.addEventListener('mousemove', this.handleDrag)
-      this.inner.addEventListener('mouseup', this.handleDragEnd)
-      this.inner.addEventListener('mouseleave', this.handleDragEnd)
+      // Add the event listeners
+      this.inner.addEventListener('mousedown', this.handleDragStart.bind(this))
+      this.inner.addEventListener('mousemove', this.handleDrag.bind(this))
+      this.inner.addEventListener('mouseup', this.handleDragEnd.bind(this))
+
+      this.inner.addEventListener('touchstart', this.handleDragStart.bind(this))
+      this.inner.addEventListener('touchmove', this.handleDrag.bind(this))
+      this.inner.addEventListener('touchend', this.handleDragEnd.bind(this))
     }
   }
 
@@ -146,19 +150,58 @@ export default class CarouselComponent extends Vue {
     }
   }
 
-  handleDragStart(event: MouseEvent) {
+  // handleDragStart(event: MouseEvent) {
+  //   if (this.transitioning) return
+
+  //   this.isDragging = true
+  //   this.dragStartX = event.clientX
+  //   this.dragOffset = 0
+  //   this.inner.style.transition = 'none'
+  // }
+
+  // handleDrag(event: MouseEvent) {
+  //   if (!this.isDragging) return
+
+  //   const dragDistance = event.clientX - this.dragStartX
+  //   this.dragOffset = dragDistance
+
+  //   // Move the slides based on the drag distance
+  //   this.inner.style.transform = `translateX(${this.dragOffset}px)`
+  // }
+
+  // handleDragEnd() {
+  //   if (!this.isDragging) return
+
+  //   this.isDragging = false
+
+  //   // Determine the direction of the drag based on the drag offset
+  //   const dragThreshold = this.inner.offsetWidth * 0.1
+  //   const direction =
+  //     this.dragOffset > dragThreshold ? 'left' : this.dragOffset < -dragThreshold ? 'right' : ''
+
+  //   if (direction === 'left') {
+  //     this.prev()
+  //   } else if (direction === 'right') {
+  //     this.next()
+  //   } else {
+  //     // Reset the position if the drag distance is not enough to trigger a slide change
+  //     this.resetTranslate()
+  //   }
+  // }
+
+  handleDragStart(event: any) {
     if (this.transitioning) return
 
     this.isDragging = true
-    this.dragStartX = event.clientX
+    this.dragStartX = this.getEventX(event)
     this.dragOffset = 0
     this.inner.style.transition = 'none'
   }
 
-  handleDrag(event: MouseEvent) {
+  handleDrag(event: any) {
     if (!this.isDragging) return
 
-    const dragDistance = event.clientX - this.dragStartX
+    const dragDistance = this.getEventX(event) - this.dragStartX
     this.dragOffset = dragDistance
 
     // Move the slides based on the drag distance
@@ -183,6 +226,10 @@ export default class CarouselComponent extends Vue {
       // Reset the position if the drag distance is not enough to trigger a slide change
       this.resetTranslate()
     }
+  }
+
+  getEventX(event: any) {
+    return event.type.startsWith('touch') ? event.touches[0].clientX : event.clientX
   }
 }
 </script>

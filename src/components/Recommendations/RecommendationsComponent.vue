@@ -103,7 +103,7 @@ section {
   row-gap: 2.5rem;
 }
 
-@media (max-width: 75rem) {
+@media (max-width: 74rem) {
   section {
     display: flex;
     flex-direction: column;

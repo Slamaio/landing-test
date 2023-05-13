@@ -212,7 +212,7 @@ export default class ReadyToSellComponent extends Vue {
     }
   }
 
-  @media (max-width: 75rem) {
+  @media (max-width: 74rem) {
     margin-right: -2rem;
   }
 }
@@ -278,6 +278,7 @@ export default class ReadyToSellComponent extends Vue {
     gap: 0.5rem;
 
     img {
+      cursor: pointer;
       max-width: 100%;
       object-fit: cover;
       border-radius: 0.25rem;
@@ -309,7 +310,9 @@ export default class ReadyToSellComponent extends Vue {
 
     @media (min-width: 48rem) {
       position: relative;
-      margin: 0rem -2.5rem;
+      margin: 0rem -2rem;
+      // margin: 0rem -2.5rem;
+
       .gallery__other {
         flex-direction: row;
         position: absolute;
@@ -323,6 +326,7 @@ export default class ReadyToSellComponent extends Vue {
 
         .gallery__tertiary {
           align-items: end;
+
           img {
             max-width: 6rem;
           }

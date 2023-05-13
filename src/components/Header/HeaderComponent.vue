@@ -111,6 +111,10 @@ header {
         left: 74px;
       }
     }
+
+    @media (max-width: 74rem) {
+      display: none;
+    }
   }
 
   @media (min-width: 75rem) {
