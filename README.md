@@ -10,10 +10,10 @@ This is a landing page project built with Vue 3, Vite, Pinia and Vue Router. It 
 
 The following VSCode extensions are also recommended for this project:
 
-- [webben.browserslist](https://marketplace.visualstudio.com/items?itemName=webben.browserslist): An extension that provides syntax highlighting and validation for browserslist files.
-- [editorconfig.editorconfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig): An extension that helps maintain consistent coding styles across different editors and IDEs by using EditorConfig files.
-- [dbaeumer.vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint): An extension that integrates ESLint into VSCode and provides linting feedback and auto-fixing capabilities.
-- [esbenp.prettier-vscode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode): An extension that integrates Prettier into VSCode and provides code formatting on save or on demand.
+- [browserslist](https://marketplace.visualstudio.com/items?itemName=webben.browserslist): An extension that provides syntax highlighting and validation for browserslist files.
+- [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig): An extension that helps maintain consistent coding styles across different editors and IDEs by using EditorConfig files.
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint): An extension that integrates ESLint into VSCode and provides linting feedback and auto-fixing capabilities.
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode): An extension that integrates Prettier into VSCode and provides code formatting on save or on demand.
 
 ## Installation
 
