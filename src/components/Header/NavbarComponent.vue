@@ -94,7 +94,8 @@ export default class NavbarComponent extends Vue {}
             z-index: 1;
           }
 
-          &:hover {
+          &:hover,
+          &:focus {
             border-radius: 1.25rem 1.25rem 0rem 0rem;
             background: rgba(255, 255, 255, 0.1) !important;
             border-color: rgba(255, 255, 255, 0.3) !important;
@@ -102,7 +103,6 @@ export default class NavbarComponent extends Vue {}
 
             .dropdown-content {
               display: block;
-              // flex-direction: column;
 
               a {
                 display: block;

@@ -25,8 +25,6 @@ export default class App extends Vue {}
 
 <style scoped>
 .container--flex {
-  /* grid-column: span 3; */
-
   display: flex;
   flex-wrap: wrap;
 

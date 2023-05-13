@@ -29,7 +29,7 @@ import SubscribeComponent from '@/components/SubscribeComponent.vue'
 export default class HomeView extends Vue {}
 </script>
 
-<style>
+<style scoped>
 main {
   display: flex;
   flex-direction: column;

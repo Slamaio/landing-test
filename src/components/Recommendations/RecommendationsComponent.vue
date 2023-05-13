@@ -14,6 +14,7 @@
           :class="category == 'house' ? 'button--green' : ''"
           @click="category = 'house'"
         >
+          <IconHouse class="category__button__icon" />
           House
         </button>
         <button
@@ -21,6 +22,7 @@
           :class="category == 'villa' ? 'button--green' : ''"
           @click="category = 'villa'"
         >
+          <IconVilla class="category__button__icon" />
           Villa
         </button>
         <button
@@ -28,6 +30,7 @@
           :class="category == 'apartment' ? 'button--green' : ''"
           @click="category = 'apartment'"
         >
+          <IconApartment class="category__button__icon" />
           Apartment
         </button>
       </div>
@@ -37,7 +40,7 @@
       </div>
     </div>
     <div class="house" ref="house">
-      <CarouselComponent ref="carousel" v-model="displayRecommendations">
+      <CarouselComponent ref="carousel" v-model="displayRecommendations" :gap="'2.5rem'">
         <template #slides>
           <div class="slide" v-for="(slide, index) in displayRecommendations" :key="index">
             <RecommendationCardComponent :item="slide" />
@@ -52,13 +55,20 @@
 import { Component, Ref, Vue } from 'vue-facing-decorator'
 import IconArrowBack from '@/components/icons/IconArrowBack.vue'
 import IconArrowForward from '@/components/icons/IconArrowForward.vue'
+import IconHouse from '@/components/icons/IconHouse.vue'
+import IconVilla from '@/components/icons/IconVilla.vue'
+import IconApartment from '@/components/icons/IconApartment.vue'
 import RecommendationCardComponent from './RecommendationCardComponent.vue'
-import CarouselComponent from '../CarouselComponent.vue'
+import CarouselComponent from '@/components/CarouselComponent.vue'
+import { useAppStore } from '@/store/app'
 
 @Component({
   components: {
     IconArrowBack,
     IconArrowForward,
+    IconHouse,
+    IconVilla,
+    IconApartment,
     RecommendationCardComponent,
     CarouselComponent,
   },
@@ -67,96 +77,13 @@ export default class RecommendationsComponent extends Vue {
   @Ref('house') house!: HTMLDivElement
   @Ref('carousel') carousel!: any
 
+  store = useAppStore()
+  recommendationsList = this.store.recommendations
+
   itemsToShow = 0
 
   currIndex = 0
   category = 'house'
-  recommendationsList = [
-    {
-      category: 'house',
-      img: 'https://picsum.photos/id/237/340/382',
-      title: 'House 1',
-      price: 'price',
-      tag: 'tag',
-      seller: {
-        avatar: 'https://picsum.photos/40',
-        name: 'name',
-        location: 'location',
-      },
-    },
-    {
-      category: 'house',
-      img: 'https://picsum.photos/id/236/340/382',
-      title: 'House 2',
-      price: 'price',
-      tag: 'tag',
-      seller: {
-        avatar: 'https://picsum.photos/40',
-        name: 'name',
-        location: 'location',
-      },
-    },
-    {
-      category: 'house',
-      img: 'https://picsum.photos/id/235/340/382',
-      title: 'House 3',
-      price: 'price',
-      tag: 'tag',
-      seller: {
-        avatar: 'https://picsum.photos/40',
-        name: 'name',
-        location: 'location',
-      },
-    },
-    {
-      category: 'house',
-      img: 'https://picsum.photos/id/234/340/382',
-      title: 'House 4',
-      price: 'price',
-      tag: 'tag',
-      seller: {
-        avatar: 'https://picsum.photos/40',
-        name: 'name',
-        location: 'location',
-      },
-    },
-    {
-      category: 'house',
-      img: 'https://picsum.photos/id/233/340/382',
-      title: 'House 5',
-      price: 'price',
-      tag: 'tag',
-      seller: {
-        avatar: 'https://picsum.photos/40',
-        name: 'name',
-        location: 'location',
-      },
-    },
-    {
-      category: 'villa',
-      img: 'https://picsum.photos/id/237/340/382',
-      title: 'Villa 1',
-      price: 'price',
-      tag: 'tag',
-      seller: {
-        avatar: 'https://picsum.photos/40',
-        name: 'name',
-        location: 'location',
-      },
-    },
-    {
-      category: 'apartment',
-      img: 'https://picsum.photos/id/236/340/382',
-      title: 'Apartment 2',
-      price: 'price',
-      tag: 'tag',
-      seller: {
-        avatar: 'https://picsum.photos/40',
-        name: 'name',
-        location: 'location',
-      },
-    },
-  ]
 
   get displayRecommendations() {
     return this.recommendationsList.filter((rec) => rec.category == this.category)
@@ -173,8 +100,14 @@ export default class RecommendationsComponent extends Vue {
 
 <style scoped>
 section {
-  display: grid;
   row-gap: 2.5rem;
+}
+
+@media (max-width: 75rem) {
+  section {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .title {
@@ -248,6 +181,11 @@ section {
   color: #888b97;
 }
 
+.category__button__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .button--green {
   background: #d1fae5;
   color: #10b981;
@@ -280,13 +218,9 @@ section {
   display: flex;
   gap: 2.5rem;
   overflow: hidden;
-  max-width: calc(100vw - 2rem);
+  max-width: calc(100vw - 2.5rem);
 
   margin: 0rem -2rem 0rem 0rem;
-}
-
-.house:deep(.inner) {
-  gap: 2.5rem;
 }
 
 @media (min-width: 75rem) {

@@ -12,7 +12,7 @@
 import { Component, Prop, Vue } from 'vue-facing-decorator'
 
 @Component({})
-export default class ReadyToSellComponent extends Vue {
+export default class UserCardComponent extends Vue {
   @Prop() avatar?: string
   @Prop() title?: string
   @Prop() subtitle?: string

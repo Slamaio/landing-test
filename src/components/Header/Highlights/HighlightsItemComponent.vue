@@ -25,6 +25,7 @@ article {
   align-items: center;
   padding: 1.5rem;
   gap: 1rem;
+  width: max-content;
 
   background: var(--vt-c-white);
   box-shadow: 0px 0.75rem 3rem rgba(51, 51, 51, 0.06);
@@ -40,7 +41,7 @@ img {
 .container--flex {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 0.125rem;
 }
 
 h1 {
@@ -55,6 +56,5 @@ p {
   font-size: 0.75rem;
   line-height: 167%;
   color: #68799f;
-  /* align-self: stretch; */
 }
 </style>

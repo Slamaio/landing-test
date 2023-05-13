@@ -5,30 +5,27 @@
         <h1>Subscribe For More Info and update from Hounter</h1>
         <div class="subscribe">
           <Icon class="subscribe__icon" icon="eva:email-fill" color="#3b82f6" />
-          <input class="subscribe__input" type="email" placeholder="Your email here" />
-          <button class="subscribe__button">Subsribe Now</button>
+          <input
+            class="subscribe__input"
+            type="email"
+            placeholder="Your email here"
+            v-model="email"
+          />
+          <button class="subscribe__button" @click="validateEmail">Subsribe Now</button>
         </div>
       </div>
       <div class="flex-break"></div>
       <div class="blob-group blob-group--1">
-        <div class="column">
-          <img src="https://picsum.photos/81" alt="" class="blob" />
-          <img src="https://picsum.photos/36" alt="" class="blob" />
-        </div>
-        <div class="column">
-          <img src="https://picsum.photos/36" alt="" class="blob" />
-          <img src="https://picsum.photos/54" alt="" class="blob" />
-        </div>
+        <img src="https://picsum.photos/81" alt="" class="blob blob--1" />
+        <img src="https://picsum.photos/36" alt="" class="blob blob--2" />
+        <img src="https://picsum.photos/36" alt="" class="blob blob--3" />
+        <img src="https://picsum.photos/54" alt="" class="blob blob--4" />
       </div>
       <div class="blob-group blob-group--2">
-        <div class="column">
-          <img src="https://picsum.photos/70" alt="" class="blob" />
-          <img src="https://picsum.photos/36" alt="" class="blob" />
-        </div>
-        <div class="column">
-          <img src="https://picsum.photos/36" alt="" class="blob" />
-          <img src="https://picsum.photos/55" alt="" class="blob" />
-        </div>
+        <img src="https://picsum.photos/70" alt="" class="blob blob--5" />
+        <img src="https://picsum.photos/36" alt="" class="blob blob--6" />
+        <img src="https://picsum.photos/36" alt="" class="blob blob--7" />
+        <img src="https://picsum.photos/55" alt="" class="blob blob--8" />
       </div>
     </article>
   </section>
@@ -43,7 +40,17 @@ import { Icon } from '@iconify/vue'
     Icon,
   },
 })
-export default class SubscribeComponent extends Vue {}
+export default class SubscribeComponent extends Vue {
+  email = ''
+
+  validateEmail() {
+    if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(this.email)) {
+      return
+    } else {
+      alert('Please enter a valid email address')
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">
@@ -64,7 +71,7 @@ export default class SubscribeComponent extends Vue {}
       rgba(232, 230, 239, 0.8),
       rgba(255, 0, 0, 0) 80%
     );
-  padding: 2rem 2rem;
+  padding: 4rem 2rem;
 
   @media (min-width: 64rem) {
     flex-wrap: nowrap;
@@ -97,17 +104,56 @@ export default class SubscribeComponent extends Vue {}
   }
 }
 
-.blob-group > .column {
-  display: flex;
-  flex-direction: column;
+.blob-group {
+  display: grid;
+
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
   gap: 3rem;
-  justify-content: space-evenly;
+  justify-items: center;
+  align-items: center;
 }
 
 .blob {
   border-radius: 1.5rem;
   border: 2px solid #ffffff;
   filter: drop-shadow(0px 9px 32px rgba(89, 92, 219, 0.1));
+
+  width: fit-content;
+
+  &--2 {
+    align-self: flex-end;
+    margin-bottom: 0.5rem;
+  }
+
+  &--3 {
+    align-self: flex-start;
+  }
+
+  &--4 {
+    margin-top: 0.1rem;
+    align-self: flex-start;
+  }
+
+  &--5 {
+    align-self: flex-start;
+    margin-bottom: 0.5rem;
+  }
+
+  &--6 {
+    align-self: flex-end;
+    margin-bottom: -1rem;
+  }
+
+  &--7 {
+    align-self: flex-start;
+    margin-top: -1.5rem;
+  }
+
+  &--8 {
+    align-self: flex-end;
+    margin-top: 1rem;
+  }
 }
 
 .content {

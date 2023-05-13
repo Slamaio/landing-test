@@ -2,19 +2,13 @@
   <article>
     <div class="image">
       <img :src="item.img" />
-      <div class="tag">{{ item.tag }}</div>
+      <TagComponent :variation="item.tag" />
     </div>
     <div class="info">
       <h1>{{ item.title }}</h1>
       <h2>$ {{ item.price }}</h2>
     </div>
-    <!-- <div class="seller">
-      <img class="seller__avatar" :src="item.seller.avatar" />
-      <div class="seller__info">
-        <h3>{{ item.seller.name }}</h3>
-        <p>{{ item.seller.location }}</p>
-      </div>
-    </div> -->
+
     <UserCardComponent
       :avatar="item.seller.avatar"
       :title="item.seller.name"
@@ -27,10 +21,12 @@
 import { Component, Prop, Vue } from 'vue-facing-decorator'
 
 import UserCardComponent from '@/components/UserCardComponent.vue'
+import TagComponent from './TagComponent.vue'
 
 @Component({
   components: {
     UserCardComponent,
+    TagComponent,
   },
 })
 export default class RecommendationCardComponent extends Vue {
@@ -58,21 +54,13 @@ article {
   flex-direction: column;
 
   gap: 1.5rem;
-  border-radius: 2px;
+  border-radius: 0.125rem;
 }
 
 .image {
   height: 382px;
   max-width: 100%;
-  /* height: auto; */
 }
-
-// @media (max-width: 32rem) {
-//   .image {
-//     height: auto;
-//     width: 300px;
-//   }
-// }
 
 .image > img {
   max-width: 90vw;
@@ -81,26 +69,6 @@ article {
   z-index: -1;
 
   object-fit: cover;
-}
-
-.tag {
-  display: flex;
-  padding: 0.5rem 1rem;
-  gap: 0.625rem;
-
-  background: #fee2e2;
-  border-radius: 2rem;
-
-  position: absolute;
-  left: 1rem;
-  bottom: 1rem;
-
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-
-  text-transform: capitalize;
-
-  color: #ef4444;
 }
 
 h1,

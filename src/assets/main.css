@@ -23,8 +23,18 @@ button:hover {
   border-color: var(--vt-c-gray) !important;
 }
 
-/* a {
+a {
   text-decoration: none;
+}
+
+@media (max-width: 75rem) {
+  .color-blur {
+    display: none;
+  }
+}
+
+/* * {
+  outline: 1px solid red;
 } */
 
 @media (min-width: 75rem) {

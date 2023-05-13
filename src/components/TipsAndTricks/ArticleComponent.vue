@@ -1,13 +1,18 @@
 <template>
   <article>
     <img :src="article.cover" alt="Article cover" class="cover" />
+
     <div class="content">
       <div class="details">
         <div class="author">
           <img :src="author.avatar" alt="Author avatar" class="avatar" />
           {{ author.name }}
         </div>
-        <h1 class="title">{{ article.title }}</h1>
+
+        <h1>
+          <a href="#" class="title">{{ article.title }}</a>
+        </h1>
+
         <p v-if="article.summary" class="summary">{{ article.summary }}</p>
       </div>
       <div class="info">
@@ -89,13 +94,18 @@ article {
         }
       }
 
-      .title {
+      a.title {
         font-weight: 500;
         font-size: 1.5rem;
         line-height: 178%;
         text-transform: capitalize;
         color: #1b1c57;
         align-self: stretch;
+
+        &:hover,
+        &:active {
+          text-decoration: 0.2rem underline;
+        }
       }
 
       .summary {
@@ -126,7 +136,7 @@ article {
     flex-wrap: wrap;
 
     .cover {
-      min-height: 280px;
+      min-height: 17.5rem;
 
       @media (min-width: 32rem) {
         width: 100%;
