@@ -134,7 +134,7 @@ export default class TipsAndTricksComponent extends Vue {
       top: 202px;
     }
   }
-  @media (max-width: 75rem) {
+  @media (max-width: 74rem) {
     margin-left: -2rem;
   }
 }

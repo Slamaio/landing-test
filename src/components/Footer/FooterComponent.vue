@@ -139,7 +139,7 @@ export default class FooterComponent extends Vue {
     }
   }
 
-  @media (max-width: 75rem) {
+  @media (max-width: 74rem) {
     margin-right: -2rem;
   }
 }

@@ -36,7 +36,7 @@ export default class HighlightsComponent extends Vue {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .container--flex {
   display: flex;
   align-self: flex-end;
@@ -44,10 +44,8 @@ export default class HighlightsComponent extends Vue {
   max-width: calc(100vw - 3rem);
 
   margin: 3rem -2rem 3rem 1rem;
-}
 
-@media (min-width: 75rem) {
-  .container--flex {
+  @media (min-width: 75rem) {
     grid-column: 3/5;
     margin: 3rem 0rem 3rem 3rem;
   }

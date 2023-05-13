@@ -1,46 +1,104 @@
-# landing-test
+Okay, I can add this information to the README file. Here is a possible README file with the recommended extensions:
 
-This template should help get you started developing with Vue 3 in Vite.
+# Landing Test
+
+This is a landing page project built with Vue 3, Vite, Pinia and Vue Router. It uses webfontloader to load custom fonts and @iconify/vue to display icons. It also has TypeScript support and linting and formatting tools.
 
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Type Support for `.vue` Imports in TS
+The following VSCode extensions are also recommended for this project:
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+- [browserslist](https://marketplace.visualstudio.com/items?itemName=webben.browserslist): An extension that provides syntax highlighting and validation for browserslist files.
+- [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig): An extension that helps maintain consistent coding styles across different editors and IDEs by using EditorConfig files.
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint): An extension that integrates ESLint into VSCode and provides linting feedback and auto-fixing capabilities.
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode): An extension that integrates Prettier into VSCode and provides code formatting on save or on demand.
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## Installation
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+To install the project, you need to have Node.js and npm installed on your machine. Then, clone this repository and run the following command in the project directory:
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+This will install all the dependencies listed in the package.json file.
 
-```sh
+## Development
+
+To run the project in development mode, use the following command:
+
+```bash
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+This will start a local server on port 5173 with hot reload enabled.
 
-```sh
+## Build
+
+To build the project for production, use the following command:
+
+```bash
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+This will create a dist folder with the optimized and minified files for deployment.
 
-```sh
+## Deployment
+
+To deploy the project to GitHub Pages, use the following command:
+
+```bash
+npm run deploy
+```
+
+This will push the contents of the dist folder to the gh-pages branch of your repository. Make sure you have set up GitHub Pages for your repository before deploying.
+
+## Preview
+
+To preview the built project locally, use the following command:
+
+```bash
+npm run preview
+```
+
+This will start a local server on port 4173 with the built files.
+
+## Type Check
+
+To check the TypeScript types in your project, use the following command:
+
+```bash
+npm run type-check
+```
+
+This will run vue-tsc and report any type errors.
+
+## Lint
+
+To lint your project files, use the following command:
+
+```bash
 npm run lint
 ```
+
+This will run eslint and fix any linting errors.
+
+## Format
+
+To format your project files, use the following command:
+
+```bash
+npm run format
+```
+
+This will run prettier and format your files according to the rules specified in .prettierrc file.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Customize configuration
+
+See [Vite Configuration Reference](https://vitejs.dev/config/) for more options and details.

@@ -98,12 +98,12 @@ export default class RecommendationsComponent extends Vue {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 section {
   row-gap: 2.5rem;
 }
 
-@media (max-width: 75rem) {
+@media (max-width: 74rem) {
   section {
     display: flex;
     flex-direction: column;

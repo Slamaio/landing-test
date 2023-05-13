@@ -19,24 +19,24 @@ import { Component, Vue } from 'vue-facing-decorator'
 export default class TitleComponent extends Vue {}
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .title {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-}
 
-h1 {
-  font-weight: 600;
-  font-size: 2.5rem;
-  line-height: 3.125rem;
-  text-transform: capitalize;
-  color: var(--color-heading);
-}
+  h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+    text-transform: capitalize;
+    color: var(--color-heading);
+  }
 
-p {
-  line-height: 175%;
-  color: var(--vt-c-text-light-3);
-  opacity: 0.75;
+  p {
+    line-height: 175%;
+    color: var(--vt-c-text-light-3);
+    opacity: 0.75;
+  }
 }
 </style>

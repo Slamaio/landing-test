@@ -114,14 +114,4 @@ p {
   gap: 0.5rem;
   align-self: stretch;
 }
-
-.seller {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.seller__avatar {
-  border-radius: 50%;
-}
 </style>

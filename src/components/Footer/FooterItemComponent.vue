@@ -16,33 +16,33 @@ export default class FooterItemComponent extends Vue {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 article {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-}
 
-h1 {
-  color: var(--vt-c-blue-dark);
-  font-weight: 600;
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  text-transform: capitalize;
-}
+  h1 {
+    color: var(--vt-c-blue-dark);
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    text-transform: capitalize;
+  }
 
-ul {
-  display: flex;
-  flex-direction: column;
-  gap: 1.125rem;
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
 
-  list-style-type: none;
+    list-style-type: none;
 
-  padding: 0;
+    padding: 0;
 
-  font-size: 0.875rem;
-  line-height: 1.125rem;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
 
-  color: var(--vt-c-gray-mute);
+    color: var(--vt-c-gray-mute);
+  }
 }
 </style>
