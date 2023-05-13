@@ -134,6 +134,7 @@ section {
 .pagination button {
   width: 0.5rem;
   height: 0.5rem;
+  padding: 0;
   border-radius: 50%;
   background: #e0e3eb;
 }
