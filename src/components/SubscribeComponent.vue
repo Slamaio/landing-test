@@ -54,6 +54,10 @@ export default class SubscribeComponent extends Vue {
 </script>
 
 <style scoped lang="scss">
+$background-gradient: linear-gradient(220deg, rgba(145, 184, 249, 0.3), rgba(255, 0, 0, 0) 10%),
+  linear-gradient(270deg, rgba(232, 230, 239, 0.8), rgb(242, 253, 249), rgba(0, 255, 0, 0) 70%),
+  linear-gradient(140deg, rgba(145, 184, 249, 1), rgba(232, 230, 239, 0.8), rgba(255, 0, 0, 0) 80%);
+
 .container--flex {
   grid-column: 2;
 
@@ -63,14 +67,7 @@ export default class SubscribeComponent extends Vue {
   justify-content: center;
   gap: 1.25rem;
   border-radius: 2rem;
-  background: linear-gradient(220deg, rgba(145, 184, 249, 0.3), rgba(255, 0, 0, 0) 10%),
-    linear-gradient(270deg, rgba(232, 230, 239, 0.8), rgb(242, 253, 249), rgba(0, 255, 0, 0) 70%),
-    linear-gradient(
-      140deg,
-      rgba(145, 184, 249, 1),
-      rgba(232, 230, 239, 0.8),
-      rgba(255, 0, 0, 0) 80%
-    );
+  background: $background-gradient;
   padding: 4rem 2rem;
 
   @media (min-width: 64rem) {

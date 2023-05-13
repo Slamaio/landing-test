@@ -150,45 +150,6 @@ export default class CarouselComponent extends Vue {
     }
   }
 
-  // handleDragStart(event: MouseEvent) {
-  //   if (this.transitioning) return
-
-  //   this.isDragging = true
-  //   this.dragStartX = event.clientX
-  //   this.dragOffset = 0
-  //   this.inner.style.transition = 'none'
-  // }
-
-  // handleDrag(event: MouseEvent) {
-  //   if (!this.isDragging) return
-
-  //   const dragDistance = event.clientX - this.dragStartX
-  //   this.dragOffset = dragDistance
-
-  //   // Move the slides based on the drag distance
-  //   this.inner.style.transform = `translateX(${this.dragOffset}px)`
-  // }
-
-  // handleDragEnd() {
-  //   if (!this.isDragging) return
-
-  //   this.isDragging = false
-
-  //   // Determine the direction of the drag based on the drag offset
-  //   const dragThreshold = this.inner.offsetWidth * 0.1
-  //   const direction =
-  //     this.dragOffset > dragThreshold ? 'left' : this.dragOffset < -dragThreshold ? 'right' : ''
-
-  //   if (direction === 'left') {
-  //     this.prev()
-  //   } else if (direction === 'right') {
-  //     this.next()
-  //   } else {
-  //     // Reset the position if the drag distance is not enough to trigger a slide change
-  //     this.resetTranslate()
-  //   }
-  // }
-
   handleDragStart(event: any) {
     if (this.transitioning) return
 
@@ -234,21 +195,21 @@ export default class CarouselComponent extends Vue {
 }
 </script>
 
-<style>
+<style lang="scss">
 .carousel {
   max-width: 100%;
   overflow: hidden;
   position: relative;
-}
 
-.inner {
-  display: flex;
-  transition: transform 0.2s;
-  max-width: calc(100vw - 2rem);
-}
+  .inner {
+    display: flex;
+    transition: transform 0.2s;
+    max-width: calc(100vw - 2rem);
 
-.slide {
-  display: inline-flex;
-  overflow: visible;
+    .slide {
+      display: inline-flex;
+      overflow: visible;
+    }
+  }
 }
 </style>

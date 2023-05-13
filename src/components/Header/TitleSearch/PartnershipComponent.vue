@@ -17,7 +17,7 @@ import { Component, Vue } from 'vue-facing-decorator'
 export default class PartnershipComponent extends Vue {}
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 figcaption {
   line-height: 200%;
   color: var(--vt-c-gray-mute);

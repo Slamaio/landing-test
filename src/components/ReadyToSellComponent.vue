@@ -301,6 +301,7 @@ export default class ReadyToSellComponent extends Vue {
       .gallery__tertiary {
         display: inline-flex;
         gap: 0.5rem;
+
         img {
           max-width: 25%;
           aspect-ratio: 1;
@@ -310,15 +311,16 @@ export default class ReadyToSellComponent extends Vue {
 
     @media (min-width: 48rem) {
       position: relative;
-      margin: 0rem -2rem;
-      // margin: 0rem -2.5rem;
+      margin: 0rem -2rem 0rem 2rem;
+
+      padding: 2.5rem;
 
       .gallery__other {
         flex-direction: row;
         position: absolute;
-
         bottom: 0;
         left: 0;
+        padding: 0.5rem;
 
         img {
           max-width: 18.5rem;
@@ -408,14 +410,16 @@ export default class ReadyToSellComponent extends Vue {
     }
   }
 
-  .modal:deep(.modal-content) {
-    display: flex;
+  .modal {
+    :deep(.modal-content) {
+      display: flex;
 
-    .carousel {
-      max-width: 459px;
+      .carousel {
+        max-width: 459px;
 
-      .slide {
-        max-width: 100%;
+        .slide {
+          max-width: 100%;
+        }
       }
     }
 
@@ -447,14 +451,6 @@ export default class ReadyToSellComponent extends Vue {
 
     .title > h2 {
       margin-left: -2.5rem;
-    }
-
-    .gallery {
-      max-width: 33rem;
-
-      img {
-        max-width: 33rem;
-      }
     }
   }
 }

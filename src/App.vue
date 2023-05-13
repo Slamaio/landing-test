@@ -23,15 +23,14 @@ import FooterComponent from '@/components/Footer/FooterComponent.vue'
 export default class App extends Vue {}
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .container--flex {
   display: flex;
   flex-wrap: wrap;
-
   gap: 7.5rem;
-}
 
-.container--flex > * {
-  width: 100%;
+  > * {
+    width: 100%;
+  }
 }
 </style>
