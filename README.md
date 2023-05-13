@@ -1,5 +1,3 @@
-Okay, I can add this information to the README file. Here is a possible README file with the recommended extensions:
-
 # Landing Test
 
 This is a landing page project built with Vue 3, Vite, Pinia and Vue Router. It uses webfontloader to load custom fonts and @iconify/vue to display icons. It also has TypeScript support and linting and formatting tools.
