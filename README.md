@@ -33,7 +33,7 @@ To run the project in development mode, use the following command:
 npm run dev
 ```
 
-This will start a local server on port 3000 with hot reload enabled.
+This will start a local server on port 5173 with hot reload enabled.
 
 ## Build
 
@@ -63,7 +63,7 @@ To preview the built project locally, use the following command:
 npm run preview
 ```
 
-This will start a local server on port 5000 with the built files.
+This will start a local server on port 4173 with the built files.
 
 ## Type Check
 
