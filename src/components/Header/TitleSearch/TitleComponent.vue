@@ -33,6 +33,7 @@ export default class TitleComponent extends Vue {}
     color: var(--color-heading);
 
     span {
+      font-weight: 500;
       color: var(--vt-c-yellow);
     }
   }
